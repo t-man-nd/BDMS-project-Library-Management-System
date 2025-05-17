@@ -129,7 +129,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE PROCEDURE get_currently_borrowed_books()
 BEGIN
-    SELECT bo.BookID, bo.BookName, b.ReaderID, r.ReaderName, b.BorrowDate
+    SELECT b.BorrowID, bo.BookID, bo.BookName, b.ReaderID, r.ReaderName, b.BorrowDate
     FROM Borrowing b
     JOIN Books bo ON b.BookID = bo.BookID
     JOIN Readers r ON b.ReaderID = r.ReaderID
