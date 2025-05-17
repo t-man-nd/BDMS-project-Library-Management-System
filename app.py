@@ -19,7 +19,7 @@ def connect_to_db(user, password):
     return mysql.connector.connect(
         host='localhost',
         user='root',
-        password='114455@Nhp',
+        password='yourpassword',
         database='mytinylibrary'
     )
 
