@@ -45,7 +45,7 @@ CREATE PROCEDURE return_book (
 BEGIN
     UPDATE Borrowing
     SET ReturnStaffID = inputReturnStaffID, ReturnDate = inputReturnDate
-    WHERE BorrowID = inputBorrowID AND ReturnStaffID IS NULL;
+    WHERE BorrowID = inputBorrowID AND ReturnDate IS NULL;
     
     UPDATE Books
     SET Quantity = Quantity + 1
